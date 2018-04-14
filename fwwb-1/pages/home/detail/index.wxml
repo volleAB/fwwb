@@ -1,0 +1,38 @@
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{detail}}" wx:key="imgUrls">
+    <swiper-item>
+      <image src="{{item.gpicture}}" data-src="{{item.gpicture}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block>
+  <block wx:for="{{detail}}" wx:key="imgUrls">
+    <swiper-item>
+      <image src="{{item.gpicture}}" data-src="{{item.gpicture}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<scroll-view scroll-y="true">
+  
+  
+  <text>商品详情</text>
+  <block wx:for ="{{detail}}" wx:key="id">
+  <view class="detail">
+      <text class="title">{{item.gname}}\n{{item.gexplain}}</text>
+      <text class="price">￥{{item.price}}</text>
+    </view>
+    <view wx:key="name">
+        <image class="image_detail" src="{{item.gpicture}}" />
+    </view>
+     <view class="add">
+     <text id="{{item.gid}}" bindtap="addcart" >加入购物车</text>
+     <!-- <image id="{{item.id}}" class="cart" src="/images/bottomNav/cart.png" bindtap="addcart" />  -->
+     </view>
+       
+  </block>
+</scroll-view>
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+   <button class="button-red" bindtap="immeBuy" formType="submit">立即购买</button>
+</view>
+
+

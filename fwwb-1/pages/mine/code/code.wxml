@@ -1,0 +1,21 @@
+
+<view class="container"> 
+ <view class="login-icon"> 
+ <text>用户信息认证激活码</text>
+ </view> 
+<form bindsubmit="formSubmit" bindreset="formReset"> 
+ 
+ <!--密码-->
+  <view class="inputView"> 
+  <image class="keyImage" src="../../../images/bottomNav/password.jpg"></image> 
+  <label class="loginLab">邮箱激活码</label> 
+  <input class="inputText" password="true" placeholder="请输入邮箱激活码" bindinput="codeInput" /> 
+ </view>  
+  
+ <!--按钮-->
+ <view class="loginBtnView"> 
+  <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" formType="submit">确定认证</button> 
+  <button class="weui-btn" type="primary" formType="submit">注册</button>  
+ </view> 
+ </form>
+</view>

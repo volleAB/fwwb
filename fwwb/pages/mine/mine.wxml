@@ -1,0 +1,39 @@
+<view class="container">
+
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+   
+  </view>
+  
+  <view class="separate"></view>
+
+  <view class="line"></view>
+
+  <view class="person-list">
+    <view class="list-item">
+      <image class="item-image" src="../../images/bottomNav/mine.png"></image>
+      <text class="item-text">个人信息</text>
+    </view>
+    <view class="person-line"></view>
+    <view class="list-item">
+      <image class="item-image" src="../../images/bottomNav/mine.png"></image>
+      <text class="item-text">收货地址</text>
+    </view>
+    <view class="person-line"></view>
+    <view class="list-item">
+      <image class="item-image" src="../../images/bottomNav/mine.png"></image>
+      <text class="item-text">售后记录</text>
+    </view>
+    <view class="person-line"></view>
+    <view class="list-item">
+      <image class="item-image" src="../../images/bottomNav/mine.png"></image>
+      <text class="item-text">我的评价</text>
+    </view>
+    <view class="person-line"></view>
+    
+  </view>
+  <view class="separate"></view>
+</view>
+
+

@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/remine/remine",
+     "pages/home/home",
+        
+    "pages/login/index",
+    "pages/index/index",
+    "pages/home/detail/index",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/home/search/search",
+    "pages/mine/identification/identification",
+    "pages/mine/order/order",
+    "pages/remine/serve/serve",
+    "pages/remine/recharge/recharge"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#858585",
+    "selectedColor": "#f0145a",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "#000",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/bottomNav/home.png",
+        "selectedIconPath": "images/bottomNav/home_select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "images/bottomNav/cart.png",
+        "selectedIconPath": "images/bottomNav/cart_select.png",
+        "text": "资源车"
+      },
+      {
+        "pagePath": "pages/remine/remine",
+        "iconPath": "images/bottomNav/mine.png",
+        "selectedIconPath": "images/bottomNav/mine_select.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+<!--导航条-->  
+<view class="navbar">  
+  <view class="item1" bindtap="navbarTapC">分类</view>  
+  <view class="item2" bindtap="navbarTapR">资源</view>  
+  <view class="item3" bindtap="navbarTapU">用户</view> 
+  <view class="item4" bindtap="navbarTapL">订单</view>  
+</view>  
+ <view>
+        <button bindtap="add">增加新的分类</button>
+  </view>
+ <view bindtap="bindFocus" class="categories"> 
+    <block wx:for-items="{{categories}}" wx:key="id">  
+      <view class="cates"> 
+     
+        <view class="cate-navigator">  
+            <text class="cate-name">{{item.name}}</text>  
+        </view> 
+        <view class='con'>
+          <view class='cate-delete' data-deleteid='{{item.id}}' bindtap='deleteClick'>删除</view>
+          <view class='cate-edit' data-editid='{{item.id}}' bindtap='editClick'>修改</view>
+        </view> 
+      </view> 
+    </block>  
+ 
+</view>  
+
+
+  

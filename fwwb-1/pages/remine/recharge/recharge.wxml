@@ -1,0 +1,10 @@
+<view>  
+    <image src="../../../images/background/loginBack.jpg" style="width: 380rpx;height:380rpx; margin-left:170rpx;border-radius:190rpx;"></image>  
+  </view> 
+<view>
+    <text>输入你要充值的金额</text>
+    <form bindsubmit='submit'>
+    </form>
+    <input class="weui-input" name="money" placeholder="充值金额" type="text" value="{{money}}"/>
+    <button clclass="weui-btn" type="primary" formType="submit">去充值</button>  
+</view>
