@@ -97,10 +97,11 @@ Page({
           // 返回（在if内使用return，跳出循环节约运算，节约性能）  
           return;
         } catch (e) {
-          console.log(e)
+          console.log(e.target.id);
         }
       }
     }
+    console.log()
   },
   // 立即购买
   immeBuy() {

@@ -58,12 +58,12 @@ swiper-item image {
   height: 100rpx;
 } */
 .add{
-   width: 50%;
-  height: 100rpx;
-   position: fixed;
-   bottom:-2rpx;
-   left: 0rpx;
-   background-color: green;
+width: 50%;
+height: 100rpx;
+position: fixed;
+bottom:0rpx;
+left: 0rpx;
+background-color: green;
 }
 
 .button-red {

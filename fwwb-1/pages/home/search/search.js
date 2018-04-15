@@ -26,12 +26,9 @@ Page({
     var program_id = app.program_id;
     var that = this;
     wx.request({
-      url: '',//这里填写后台给你的搜索接口  
+      url: 'http://119.28.179.110/recycle/garbage/search.action',//这里填写后台给你的搜索接口  
       method: 'post',
-      data: { str: that.data.searchValue, program_id: program_id, style: id },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
+      data: { cname: value },
       success: function (res) {
         if (res.data.length == 0) {
           that.setData({

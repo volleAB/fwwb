@@ -1,20 +1,6 @@
-var app = getApp()
+var app = getApp();
 Page({
   data: {
-    categories: [
-      {
-        id: "001",
-        name: "可回收"
-      },
-      {
-        id: "002",
-        name: "循环利用"
-      },
-      {
-        id: "003",       
-        name: "不可回收"
-      }
-    ]
   },
   navbarTapC: function () {
    wx.navigateTo({
@@ -35,30 +21,32 @@ Page({
     wx.navigateTo({
       url: 'list/list',
     })
-  },
-  deleteClick: function (event){
-    var id = event.currentTarget.dataset.deleteid;
+  }, 
+  deleteClick: function (e){
+    var id = e.currentTarget.id;
+    console.log(id);
     wx.request({
-      url: '?id=' + id,
-      data: {},
-      method: 'GET',
+      url: 'http://119.28.179.110/recycle/category/delete.action',
+      data: {
+        cid : id
+      },
+      method: 'POST',
       success: function (res) {
         if (1) {
           wx.showToast({
             title:'删除成功',
             duration: 1500
-          })
+          }) 
         } else {
           wx.showToast({
             title:'删除失败',
             duration: 1000
-
           })
         }
-      }
+      } 
   })
   },
-  add: function () {
+  add: function () { 
     wx.navigateTo({
       url: 'classify/add/add',
     }) 
@@ -67,5 +55,22 @@ Page({
     wx.navigateTo({
       url: 'classify/edit/edit',
     })
-  }   
+  },
+  onLoad: function (options) {
+    var that = this;
+      wx.request({
+        url: 'http://119.28.179.110/recycle/category/select.action',
+        method: 'POST',
+        data: {},
+        success: function (res) {
+          that.setData({
+            categories: res.data.list,
+          })
+          console.log(res.data);
+        }
+      })
+    },
+  onPullDownRefresh: function () {
+    wx.startPullDownRefresh()
+  }
 })

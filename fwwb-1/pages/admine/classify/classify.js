@@ -39,9 +39,11 @@ Page({
   deleteClick: function (event) {
     var id = event.currentTarget.dataset.deleteid;
     wx.request({
-      url: '?id=' + id,
-      data: {},
-      method: 'GET',
+      url: 'http://119.28.179.110/recycle/category/delete.action',
+      data: {
+        cid: id
+      },
+      method: 'POST',
       success: function (res) {
         if (1) {
           wx.showToast({
@@ -52,7 +54,6 @@ Page({
           wx.showToast({
             title: '删除失败',
             duration: 1000
-
           })
         }
       }

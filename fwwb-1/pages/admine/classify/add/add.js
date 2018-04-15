@@ -8,20 +8,27 @@ Page({
   
   },
 
+  // getmes: function (e) {
+  //   var that = this;
+  //   var id = e.currentTarget.dataset;
+  //   console.log(id);
+  // },
+
   editSubmit: function (e) {
     var that = this;
-    var id = event.currentTarget.dataset.editid;
+    var id = e.currentTarget.dataset.editid;
     wx.request({
-      url: 'id=' + id,
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      method: 'GET',
+      url: 'http://119.28.179.110/recycle/category/add.action',
+      // header: {
+      //   "Content-Type": "application/x-www-form-urlencoded"
+      // },
+      method: 'POST',
       data: {
-          name: e.detail.value.name
+        cname: e.detail.value.name,
+        // cprice: price
       },
       success: function (res) {
-        if (res.data.status == 0) {
+        if (res.data.status == 200) {
           wx.showToast({
             title:'保存成功',
             duration: 1500
@@ -32,6 +39,7 @@ Page({
             duration: 1000
           })
         }
+        console.log(e.detail.value.name)
   }
 })
  }

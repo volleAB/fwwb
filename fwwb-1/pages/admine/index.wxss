@@ -65,6 +65,8 @@ page{
 .cate-delete{  
     display: flex;  
     flex: 1;  
+    position: relative;
+    right: 30rpx;
     flex-direction: column;  
     color: #555;  
     justify-content: center;  

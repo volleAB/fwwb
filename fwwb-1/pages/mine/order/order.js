@@ -5,36 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-orders:[
-  {
-    goodslist: [
-      {
-        id: "001",
-        imgUrl: "../../../images/bottomNav/bottle.jpg",
-        name: "彩色瓶子",
-        num:"3",
-        price: "1.00"
-      },
-      {
-        id: "002",
-        imgUrl: "../../../images/bottomNav/gold.jpg",
-        name: "废旧金属",
-        num:"5",
-        price: "5.00"
-      }
-    ],
-   totalprice:"10元"
-  }
-]
-     
-   
+// orders:[
+//   {
+//     goodslist: [
+//       {
+//         id: "001",
+//         imgUrl: "../../../images/bottomNav/bottle.jpg",
+//         name: "彩色瓶子",
+//         num:"3",
+//         price: "1.00"
+//       },
+//       {
+//         id: "002",
+//         imgUrl: "../../../images/bottomNav/gold.jpg",
+//         name: "废旧金属",
+//         num:"5",
+//         price: "5.00"
+//       }
+//     ],
+//    totalprice:"10元"
+//   }
+//]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    wx.request({
+      url: 'http://119.28.179.110/recycle/order/order.action',
+      success: function () {
+
+      }
+    })
   },
 
   /**
