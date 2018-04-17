@@ -1,16 +1,15 @@
 {
   "pages": [
-    "pages/login/index",
-    "pages/home/home",
+    "pages/home/search/search",
     "pages/admine/index",
-    
-    
+    "pages/home/home",
+    "pages/login/index",
     "pages/index/index",
     "pages/remine/remine",
     "pages/home/detail/index",
     "pages/cart/cart",
     "pages/mine/mine",
-    "pages/home/search/search",
+    
     "pages/mine/identification/identification",
     "pages/mine/order/order",
     "pages/remine/serve/serve",

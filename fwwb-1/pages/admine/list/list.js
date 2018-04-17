@@ -1,66 +1,68 @@
-// pages/admine/list/list.js
+var app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  navbarTapC: function () {
+    wx.navigateTo({
+      url: '../classify/classify',
+    })
+  },
+  navbarTapR: function () {
+    wx.navigateTo({
+      url: '../recycle/recycle',
+    })
+  },
+  navbarTapU: function () {
+    wx.navigateTo({
+      url: '../user/user',
+    })
+  },
+  navbarTapL: function () {
+    wx.navigateTo({
+      url: '../list/list',
+    })
+  },
+  deleteClick: function (e) {
+    var id = e.currentTarget.id;
+    console.log(id);
+    wx.request({
+      url: 'http://119.28.179.110/recycle/category/delete.action',
+      data: {
+        cid: id
+      },
+      method: 'POST',
+      success: function (res) {
+        if (1) {
+          wx.showToast({
+            title: '删除成功',
+            duration: 1500
+          })
+        } else {
+          wx.showToast({
+            title: '删除失败',
+            duration: 1000
+          })
+        }
+      }
+    })
+  },
+ 
+ 
   onLoad: function (options) {
-  
+    var that = this;
+    wx.request({
+      url: 'http://119.28.179.110/recycle/order/order.action',
+      method: 'POST',
+      data: {},
+      success: function (res) {
+        that.setData({
+          categories: res.data.list,
+        })
+        console.log(res.data);
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+    wx.startPullDownRefresh()
   }
 })

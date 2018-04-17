@@ -1,0 +1,15 @@
+<form bindsubmit="addSubmit">
+<view class="consignee">
+ <text class="consignee-tit">新的资源信息</text>
+  <view class="consignee-main">
+    <view class="flex flex-align-center flex-pack-justify">
+    <text>新资源名</text>
+    <input class="flex-1" name="name" type="number" maxlength="11" placeholder="请输入新的资源名" value='{{cname}}' bindinput='cnameInput'/>
+    </view>
+ </view>
+ </view>
+
+ <view class="receipt-true">
+ <button class="btn_login" formType="submit" bindtap='show'>保存</button>
+ </view>
+ </form>

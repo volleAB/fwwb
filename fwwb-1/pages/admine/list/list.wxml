@@ -1,2 +1,26 @@
-<!--pages/admine/list/list.wxml-->
-<text>pages/admine/list/list.wxml</text>
+<!--导航条-->  
+<view class="navbar">  
+  <view class="item1" bindtap="navbarTapC">分类</view>  
+  <view class="item2" bindtap="navbarTapR">资源</view>  
+  <view class="item3" bindtap="navbarTapU">用户</view> 
+  <view class="item4" bindtap="navbarTapL">订单</view>  
+</view>  
+ <view> 
+        <text>所有订单</text>
+  </view>
+ <view bindtap="bindFocus" class="categories"> 
+    <block wx:for-items="{{categories}}" wx:key="id">  
+      <view class="cates" id='{{item.oid}}'>
+        <view class="cate-navigator">  
+            <text class="cate-name">{{item.ordertime}} {{item.oprice}} 地址：{{item.address}}</text>
+        </view> 
+        <view class='con'>
+          <view class='cate-delete' data-deleteid='{{item.id}}' bindtap='deleteClick' id='{{item.cid}}'>删除</view>
+        </view> 
+      </view> 
+    </block>  
+ 
+</view>  
+
+
+  

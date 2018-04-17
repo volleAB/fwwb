@@ -1,5 +1,5 @@
 <!--pages/search/search.wxml-->  
-<view class="search page_row">  
+<view class="search page_row" bindtop='suo'>  
   <input class="df_1" placeholder="请输入你有搜索的内容" value="{{searchValue}}" bindinput="searchValueInput" />  
   <icon class="searchcion" size='20' type='search'></icon> 
 </view>  

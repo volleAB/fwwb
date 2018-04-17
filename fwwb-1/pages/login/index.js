@@ -7,9 +7,9 @@ Page({
     username: '',
     password: '',
     id: [
-      '管理员',
       '普通用户',
-      '回收员'
+      '回收员',
+      '管理员'
     ],
     index: 0
   },
@@ -18,7 +18,7 @@ Page({
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
     console.log(e.detail.value.username)
     wx.request({
-      url: 'http://119.28.179.110/recycle/guser/login.action', 
+      url: 'http://119.28.179.110/recycle/user/login.action', 
       method: 'POST',
       // header: {
       //   'Content-Type': 'application/json'
@@ -43,5 +43,8 @@ Page({
     this.setData({
       index: e.detail.value
     });
+    console.log(e.detail.value) 
+  },
+  onLoad: function () {
   },
 })
