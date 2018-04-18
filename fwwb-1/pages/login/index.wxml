@@ -4,7 +4,7 @@
     <image src="../../images/background/loginBack.jpg" style="width: {{windowWidth * 0.3}}px;height:{{windowWidth * 0.4}}px; margin-left:{{windowWidth * 0.5 - 80}}px;border-radius:{{windowWidth * 0.2}}px;"></image>  
   </view>
   <view class='top'>选择您的身份</view>
-    <picker mode="selector" range="{{id}}" value="{{index}}" bindchange="listenerPickerSelected">
+    <picker class='top2' mode="selector" range="{{id}}" value="{{index}}" bindchange="listenerPickerSelected">
       <text>{{id[index]}}</text>
     </picker>
   <form bindsubmit="formBindSubmit">  

@@ -17,5 +17,8 @@
   background-color: rgba(255,255,255,0.2);  
 } 
 .top {
-  margin: 20rpx auto;
+  margin: 20rpx 260rpx;
+}
+.top2 {
+  margin: 20rpx 295rpx;
 }

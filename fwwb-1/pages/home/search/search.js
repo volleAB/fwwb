@@ -8,14 +8,14 @@ Page({
     img: '',
     nanshen_card: ''
   },
-  onLoad: function (e) {
-    function suo(e) {
+suo: function(e) {
       var that = this;
       var value = that.data.searchValue;
+      console.log(value)
       wx.request({
         url: 'http://119.28.179.110/recycle/garbage/search.action',//这里填写后台给你的搜索接口  
         method: 'post',
-        data: { cname: "水" },
+        data: { cname: value },
         success: function (res) {
           if (res.data.length == 0) {
             that.setData({
@@ -34,14 +34,13 @@ Page({
           });
         },
       });
-    }
-  },
+    },
   searchValueInput: function (e) {
     var value = e.detail.value;
     this.setData({
       searchValue: value,
     });
-    console.log(this.data.searchValue);
+    // console.log(this.data.searchValue);
   },
   //suo: 
 });  

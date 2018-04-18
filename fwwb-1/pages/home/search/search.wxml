@@ -1,8 +1,8 @@
 <!--pages/search/search.wxml-->  
-<view class="search page_row" bindtop='suo'>  
+<view class="search page_row">  
   <input class="df_1" placeholder="请输入你有搜索的内容" value="{{searchValue}}" bindinput="searchValueInput" />  
-  <icon class="searchcion" size='20' type='search'></icon> 
-</view>  
+  <button class="searchcion" size='20' type='search' bindtap='suo'>搜索</button> 
+</view>
 <view class="search_no" wx:if="{{!centent_Show}}">  
   <text>很抱歉,没有找到您要搜索的资料/(ㄒoㄒ)/~~</text>  
 </view>  
