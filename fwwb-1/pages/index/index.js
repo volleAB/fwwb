@@ -29,7 +29,7 @@ Page({
     var that = this;
    
     wx.request({
-      url: 'http://119.28.179.110/recycles/user/regist.action',
+      url: 'http://119.28.179.110/recycle/user/regist.action',
       method:'POST',
       data: {
         username:username,
@@ -38,9 +38,9 @@ Page({
         password: password,
         address:address 
       },
-      header: {
-        'Content-Type': 'application/json'
-      },
+      // header: {
+      //   'Content-Type': 'application/json'
+      // },
       success: function (res) {
         console.log('data:', res.data)
         if (10){

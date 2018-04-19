@@ -28,7 +28,13 @@ Page({
         "password": e.detail.value.password
       },
       success: function (res) {
-        console.log('data:', res.data)
+        // console.log('data:', res.data[5].token);
+        var getAppInfo = app.globalData.token;
+        getApp().globalData.token = res.data[5].token;
+        console.log(res.data, app.globalData.token);
+        wx.reLaunch({
+          url: '../home/home'
+        }) 
       },
       fail: function (res) {
         console.log(res);
@@ -43,8 +49,5 @@ Page({
     this.setData({
       index: e.detail.value
     });
-    console.log(e.detail.value) 
-  },
-  onLoad: function () {
   },
 })

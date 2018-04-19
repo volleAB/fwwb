@@ -10,3 +10,46 @@
 input{
   float: left;
 }
+
+.search{  
+    background: #fff;  
+    display: flex;  
+    flex-direction: column;  
+}  
+.goods{  
+    display: flex;  
+    flex-direction: row;  
+    border-bottom: 1px solid #ddd;  
+}  
+.good-img{  
+    padding: 5px;  
+    width: 80px;  
+    height: 80px;  
+}  
+.good-cont{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: column;  
+    font-size: 14px;  
+}  
+.goods-navigator{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: column;  
+    justify-content: center;  
+}  
+.good-name{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: column;  
+    color: #555;  
+    justify-content: center;  
+}  
+.good-price{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: row;  
+    justify-content: space-between;  
+    color:#e4393c;  
+    font-weight: 600;  
+}  

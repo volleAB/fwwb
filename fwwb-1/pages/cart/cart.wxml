@@ -8,36 +8,33 @@
     <!--header-->  
     <view class="baoyou"></view>  
     <!--list item-->  
-    <block wx:for="{{cart}}" wx:key="{{cart}}">  
-        <view class="goods">  
+    <block wx:for="{{cart}}" wx:key="{{gid}}">  
+        <view class="goods" >  
             <!--左侧图片-->  
             <view>  
-                <image src="{{item.imgUrl}}" class="good-img"/>  
+                <image src="{{item.garbage.gpicture}}" class="good-img"/>  
             </view>  
             <!--右侧说明部分-->  
             <view class="good-cont">  
                 <!--文字说明-->  
                 <view class="goods-navigator">  
-                    <text class="good-name">{{item.name}}</text>  
+                    <text class="good-name">{{item.garbage.gname}}</text>  
                 </view>  
                 <!--价钱和购物加减的父盒子-->  
                 <view class="good-price">  
-                    <text class="price">￥{{item.price}}</text>  
+                    <text class="price">￥{{item.garbage.category.cprice}}</text> 
                     <view class="btn-box">  
-                        <view class="btn">  
-                            <button id="del{{index}}" type="default" size="mini" bindtap="delCount">-</button>  
-                            <input  value="{{item.count}}"/>  
-                            <button id="add{{index}}" type="default" size="mini" bindtap="addCount">+</button>  
-                        </view>  
-                        <image id="img{{index}}" src="/images/bottomNav/trash.png" bindtap="delGoods"/>  
-                    </view>  
+                        <text class="price">重量为：{{item.weight}} KG</text>
+                        <image id="{{item.garbage.gid}}" src="/images/bottomNav/trash.png" bindtap="delGoods"/>
+                    </view>
                 </view>  
             </view>  
         </view>  
     </block>  
     <!--footer-->  
     <view class="total">  
-        <view class="total_text">合计：<text>￥{{total}}</text></view>  
-        <button class="total_js" size="mini" bindtap="toBuy">去结算({{goodsCount}})</button>  
+        <view class="total_text">合计：<text>￥{{total}}</text></view>
+        <button class="total_js" size="mini" bindtap="cleanAll" style='background-color:#999999'>清空</button>  
+        <button class="total_js" size="mini" bindtap="toBuy">去结算</button>  
     </view>  
 </view>

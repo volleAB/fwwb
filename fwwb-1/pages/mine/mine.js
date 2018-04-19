@@ -1,9 +1,9 @@
 var app = getApp()
+var to1;
 Page({
   data: {
     userInfo: {},
     motto: 'Hello World',
-    // orderItems
     },
 
   identification: function () {
@@ -19,8 +19,8 @@ Page({
   },
 
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
+    var that = this;
+    to1 = app.globalData.token;
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function (userInfo) {
       //更新数据
@@ -29,12 +29,17 @@ Page({
       })
     }),
     wx.request({
-      url: '',
+      url: 'http://119.28.179.110/recycle/user/uremain.action',
       method:'POST',
       data:{
-         myprice:''
+         token: to1
+      },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          myprice: res.data[0]
+        })
       }
-
     })
   }
 })

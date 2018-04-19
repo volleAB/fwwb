@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/login/index",
     "pages/home/home",
+    "pages/cart/cart",
     "pages/admine/classify/edit/edit",
     "pages/admine/classify/add/add",
     "pages/admine/classify/classify",
@@ -10,11 +12,9 @@
     "pages/mine/order/order",
     "pages/mine/identification/identification",
     "pages/mine/mine",
-    "pages/cart/cart",
     "pages/home/detail/index",
     "pages/remine/remine",
     "pages/index/index",
-    "pages/login/index", 
     "pages/home/search/search",
     "pages/admine/index",
     "pages/admine/recycle/recycle",

@@ -17,20 +17,21 @@
   <text>商品详情</text>
   <block wx:for ="{{detail}}" wx:key="id">
   <view class="detail">
+      <view>
       <text class="title">{{item.gname}}\n{{item.gexplain}}</text>
-      <text class="price">￥{{item.price}}</text>
+      </view>
+      <view wx:key="category">
+      <text class="price">￥{{item.category.cprice}}</text>
+      </view>
+      <input class="weui" placeholder="请输入重量" type="text" maxlength="20" value="{{wei}}" focus="true" name="wei" bindinput='getWei'/> 
     </view>
-    <view wx:key="name">
-        <image class="image_detail" src="{{item.gpicture}}" />
-    </view>
+  
   </block>
 </scroll-view>
 <!-- 底部悬浮栏 -->
 <view class="detail-nav">
      <button class="add" id="{{item.gid}}" bindtap="addcart" >加入购物车</button>
 </view>
-<view class="detail-nav">
-   <button class="button-red" bindtap="immeBuy" formType="submit">立即购买</button>
-</view>
+
 
 

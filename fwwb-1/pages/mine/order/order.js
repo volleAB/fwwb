@@ -1,31 +1,11 @@
-// pages/mine/order/order.js
+var app = getApp()
+var to1;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-// orders:[
-//   {
-//     goodslist: [
-//       {
-//         id: "001",
-//         imgUrl: "../../../images/bottomNav/bottle.jpg",
-//         name: "彩色瓶子",
-//         num:"3",
-//         price: "1.00"
-//       },
-//       {
-//         id: "002",
-//         imgUrl: "../../../images/bottomNav/gold.jpg",
-//         name: "废旧金属",
-//         num:"5",
-//         price: "5.00"
-//       }
-//     ],
-//    totalprice:"10元"
-//   }
-//]
   },
 
   /**
@@ -33,11 +13,20 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    to1 = app.globalData.token;
+    console.log(to1);
     wx.request({
-      url: 'http://119.28.179.110/recycle/order/order.action',
-      success: function () {
-
-      }
+      url: 'http://119.28.179.110/recycle/order/uorder.action',
+      method: 'POST',
+      data: {
+        token: to1
+      },
+      success: function (res) {
+        console.log(res);
+      },
+      fail: function (res) {
+        console.log(res);
+      },
     })
   },
 

@@ -26,5 +26,4 @@
       </view>  
     </block>  
     <view><text>总价</text><text>￥{{item.totalprice}}</text></view>
-
  </view>  
