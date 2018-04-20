@@ -1,0 +1,11 @@
+<form bindsubmit="editSubmit">
+<view class="consignee">
+ <text class="consignee-tit">充值界面</text>
+  <view class="consignee-main">
+    <input class="flex-1" name="name" type="number" maxlength="11" placeholder="请输入您充值的金额<" />
+  </view>
+ </view>
+ <view class="receipt-true">
+ <button class="btn_login" formType="submit">充值</button>
+ </view>
+ </form>

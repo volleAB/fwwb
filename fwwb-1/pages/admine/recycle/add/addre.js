@@ -19,9 +19,6 @@ Page({
     var id = e.currentTarget.dataset.editid;
     wx.request({
       url: 'http://119.28.179.110/recycle/category/add.action',
-      // header: {
-      //   "Content-Type": "application/x-www-form-urlencoded"
-      // },
       method: 'POST',
       data: {
         cname: e.detail.value.name,
@@ -30,16 +27,15 @@ Page({
       success: function (res) {
         if (res.data.status == 200) {
           wx.showToast({
-            title: '保存成功',
+            title: '充值成功',
             duration: 1500
           })
         } else {
           wx.showToast({
-            title: '保存失败',
+            title: '充值失败',
             duration: 1000
           })
         }
-        console.log(e.detail.value.name)
       }
     })
   }

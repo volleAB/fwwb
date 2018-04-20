@@ -1,3 +1,4 @@
+// pages/mine/addM/addM.js
 var app = getApp()
 var to1;
 Page({
@@ -6,32 +7,43 @@ Page({
    * 页面的初始数据
    */
   data: {
+  
   },
-
+  editSubmit: function (e) {
+    var that = this;
+    to1 = app.globalData.token;
+    console.log(e)
+    wx.request({
+      url: 'http://119.28.179.110/recycle/user/addBalance.action',
+      method: 'POST',
+      data: {
+        token: to1,
+        balance: e.detail.value.name,
+      },
+      success: function (res) {
+        if (res.data.status == 200) {
+          wx.showToast({
+            title: '保存成功',
+            duration: 1500
+          })
+        } else {
+          wx.showToast({
+            title: '保存失败',
+            duration: 1000
+          })
+        }
+        console.log(e.detail.value.name)
+        wx.reLaunch({
+          url: '../mine'
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    to1 = app.globalData.token;
-    console.log(to1);
-    wx.request({
-      url: 'http://119.28.179.110/recycle/order/uorder.action',
-      method: 'POST',
-      data: {
-        token: to1
-      },
-      success: function (res) {
-        that.setData({
-          order : res.data.list
-        })
-        var order = res.data.list;
-        console.log(order);
-      },
-      fail: function (res) {
-        console.log(res);
-      },
-    })
+  
   },
 
   /**
@@ -66,7 +78,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+   
   },
 
   /**

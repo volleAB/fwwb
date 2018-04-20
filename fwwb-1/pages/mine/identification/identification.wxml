@@ -9,18 +9,9 @@
  <view class="inputView"> 
   <image class="nameImage" src="../../../images/bottomNav/mail.jpg"></image> 
   <label class="loginLab">邮箱</label> 
-  <input class="inputText" placeholder="请输入邮箱" bindinput="phoneInput" /> 
+  <input class="inputText" placeholder="请输入邮箱" bindinput="emailInput" /> 
  </view> 
- <view class="line"></view> 
-  
- <!--密码-->
- <!-- <view class="inputView"> 
-  <image class="keyImage" src="../../../images/bottomNav/password.jpg"></image> 
-  <label class="loginLab">邮箱激活码</label> 
-  <input class="inputText" password="true" placeholder="请输入邮箱激活码" bindinput="passwordInput" /> 
- </view>  -->
-  
- <!--按钮-->
+ <view class="line"></view>
  <view class="loginBtnView"> 
   <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="code">个人信息认证</button> 
  </view> 

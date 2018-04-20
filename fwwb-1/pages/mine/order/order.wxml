@@ -1,29 +1,15 @@
 <view>
   <text>全部订单</text>
-</view>
-<view class="orderslist" wx:for="{{orders}}" wx:key="totalprice">
-    <!--item-->  
-    <block wx:for="{{item.goodslist}}" wx:key="id">  
-      <view class="goods">  
-        
-        <view>  
-          <image src="{{item.imgUrl}}" class="good-img" />  
-        </view>  
- 
-        <view class="good-cont">  
-       
-          <view class="goods-navigator">  
-            <text class="good-name">{{item.name}}</text>  
-          </view>  
-
-          <view class="goods-num">
-            <text>数量：</text><text>{{item.num}}</text>
-          </view>
-          <view class="good-price">  
-            <text>￥{{item.price}}</text>    
-          </view>  
+</view> 
+  <block wx:for="{{order}}" wx:key="id">  
+    <view class="goods">  
+      <view class="good-cont">  
+        <view class="goods-navigator">  
+          <text class="good-name">订单号：{{item.oid}}</text>  
+        </view> 
+        <view class="good-price">  
+          <text>￥{{item.oprice}}</text>    
         </view>  
       </view>  
-    </block>  
-    <view><text>总价</text><text>￥{{item.totalprice}}</text></view>
- </view>  
+    </view>  
+  </block> 

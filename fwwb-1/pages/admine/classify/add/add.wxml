@@ -4,11 +4,11 @@
   <view class="consignee-main">
     <view class="flex flex-align-center flex-pack-justify">
     <text>新分类名</text>
-    <input class="flex-1" name="name" type="number" maxlength="11" placeholder="请输入新的分类名" />
+    <input class="flex-1" name="name" value="{{name}}" maxlength="11" placeholder="请输入新的分类名" />
+    <input class="flex-1" name="price" type="number" value="{{price}}" maxlength="11" placeholder="请输入新的分类价格" />
     </view>
  </view>
  </view>
-
  <view class="receipt-true">
  <button class="btn_login" formType="submit">添加</button>
  </view>

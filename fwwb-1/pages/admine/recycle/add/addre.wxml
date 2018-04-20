@@ -8,7 +8,6 @@
     </view>
  </view>
  </view>
-
  <view class="receipt-true">
  <button class="btn_login" formType="submit">添加</button>
  </view>

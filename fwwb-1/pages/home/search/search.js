@@ -19,23 +19,16 @@ Page({
   suo: function (e) {
      var that = this;
      var search = that.data.searchValue;
-     //console.log(that.data);
+     console.log(that.data.searchValue);
     wx.request({
-      url: 'http://119.28.179.110/recycle/garbage/search.action',//这里填写后台给你的搜索接口  
+      url: 'http://119.28.179.110/recycle/garbage/select.action',//这里填写后台给你的搜索接口  
       method: 'post',
       data: { search: search },
       success: function (res) {
-
-        // if(res.data.length == 0) {
-        //   that.setData({
-        //     centent_Show: false,
-        //   });
-        // }
-      console.log(res.data)
+        console.log(res,search)
       that.setData({
         search: res.data.list
       });
-      search = res.data.list;
       },
       fail: function (e) {
         wx.showToast({

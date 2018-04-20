@@ -32,17 +32,15 @@ Page({
       },
       method: 'POST',
       success: function (res) {
-        if (1) {
           wx.showToast({
             title:'删除成功',
             duration: 1500
-          }) 
-        } else {
-          wx.showToast({
-            title:'删除失败',
-            duration: 1000
+        })
+        setTimeout(function e() {
+          wx.reLaunch({
+            url: './index'
           })
-        }
+        },2000)
       } 
   })
   },

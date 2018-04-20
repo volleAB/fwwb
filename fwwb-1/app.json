@@ -1,6 +1,10 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/login/index",
+    
+    
+    "pages/home/search/search",
     "pages/home/home",
     "pages/cart/cart",
     "pages/admine/classify/edit/edit",
@@ -14,17 +18,16 @@
     "pages/mine/mine",
     "pages/home/detail/index",
     "pages/remine/remine",
-    "pages/index/index",
-    "pages/home/search/search",
     "pages/admine/index",
     "pages/admine/recycle/recycle",
     "pages/admine/user/user",
-    "pages/admine/list/list"
+    "pages/admine/list/list",
+    "pages/mine/addM/addM"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "流浪者",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

@@ -1,13 +1,13 @@
 .searchcion {  
-  margin: 10rpx 10rpx 10rpx 10rpx;  
-  position: absolute;  
-  right:25rpx;  
+  margin: 4rpx;  
+  position: absolute;
+  right:25rpx;
   z-index: 2;  
-  width: 20px;  
-  height: 20px;  
-  text-align: center;  
+  width: 80px;  
+  height: 40px;  
 } 
-input{
+.df_1{
+  height: 40px;
   float: left;
 }
 

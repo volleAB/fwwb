@@ -12,7 +12,7 @@ Page({
     to1 = app.globalData.token;
     console.log(to1,typeof to1)
     setTimeout(function e() {
-      console.log(to1+"pppp")
+      //console.log(to1)
       wx.request({
         url: 'http://119.28.179.110/recycle/cart/select.action',
         method: 'POST',
@@ -93,11 +93,20 @@ Page({
     })
   },
   toBuy() {
-    wx.showToast({
-      title: '去结算',
-      icon: 'success',
-      duration: 3000
-    });
+    wx.request({
+      url: 'http://119.28.179.110/recycle/order/subOrder.action',
+      method: 'POST',
+      data: {
+        token: to1
+      },
+      success: function (res) {
+        wx.showToast({
+          title: '提交成功',
+          icon: 'success',
+          duration: 2000
+        })
+      }
+    })
     this.setData({
       showDialog: !this.data.showDialog
     });

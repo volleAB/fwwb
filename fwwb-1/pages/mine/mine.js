@@ -11,13 +11,16 @@ Page({
       url: '../mine/identification/identification',
     })
   },
-
   order: function () {
     wx.navigateTo({
       url: '../mine/order/order',
     })
   },
-
+  addM: function () {
+    wx.navigateTo({
+      url: '../mine/addM/addM',
+    })
+  },
   onLoad: function () {
     var that = this;
     to1 = app.globalData.token;
