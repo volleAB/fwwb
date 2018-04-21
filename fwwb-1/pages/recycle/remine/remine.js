@@ -1,4 +1,5 @@
 var app = getApp()
+var to1;
 Page({
   data: {
     userInfo: {},
@@ -14,32 +15,38 @@ Page({
 
   order: function () {
     wx.navigateTo({
-      url: '../mine/order/order',
+      url: '../remine/serve/serve',
     })
   },
   recharge: function () {
     wx.navigateTo({
-      url: '../remine/serve/serve',
+      url: '../remine/recharge/recharge',
     })
   },
 
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
+    var that = this;
+    to1 = app.globalData.token;
     //调用应用实例的方法获取全局数据
+    console.log(to1);
     app.getUserInfo(function (userInfo) {
       //更新数据
       that.setData({
         userInfo: userInfo
       })
-    })
-      // wx.request({
-      //   url: '',
-      //   method: 'POST',
-      //   data: {
-      //     total: myprice
-      //   }
-
-      // })
+    }),
+      wx.request({
+      url: 'http://119.28.179.110/recycle/guser/gremain.action',
+        method: 'POST',
+        data: {
+          token: to1
+        },
+        success: function (res) {
+          console.log(res.data);
+          that.setData({
+            myprice: res.data[0]
+          })
+        }
+      })
   }
 })

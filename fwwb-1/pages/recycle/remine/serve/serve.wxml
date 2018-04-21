@@ -1,0 +1,19 @@
+<view>
+  <text>接收的订单</text>
+</view>
+    <!--item-->  
+  <block wx:for="{{orders}}" wx:key="id">  
+    <view class="goods">  
+      <view>  
+        <text class="good-name">{{item.oid}}</text>  
+      </view>
+      <view class="good-cont">
+        <view class="goods-num">
+          <text>用户：</text><text>{{item.user.username}}</text>
+        </view>
+        <view class="good-price"> 
+          <text>￥{{item.oprice}}</text>    
+        </view>  
+    </view>
+    </view>
+  </block>

@@ -1,6 +1,4 @@
-// pages/remine/recharge/recharge.js
-var app = getApp()
-var to1;
+// pages/recycle/index.js
 Page({
 
   /**
@@ -9,31 +7,6 @@ Page({
   data: {
   
   },
-
-  editSubmit: function (e) {
-    var that = this;
-    to1 = app.globalData.token;
-    console.log(e)
-    wx.request({
-      url: 'http://119.28.179.110/recycle/user/addBalance.action',
-      method: 'POST',
-      data: {
-        token: to1,
-        balance: e.detail.value.name,
-      },
-      success: function (res) {
-        wx.showToast({
-          title: '保存成功',
-          duration: 1500
-        })
-        console.log(e.detail.value.name)
-        wx.reLaunch({
-          url: '../remine'
-        })
-      },
-    })
-  },
- 
 
   /**
    * 生命周期函数--监听页面加载

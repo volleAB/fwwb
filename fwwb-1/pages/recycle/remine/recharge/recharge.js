@@ -15,11 +15,11 @@ Page({
     to1 = app.globalData.token;
     console.log(e)
     wx.request({
-      url: 'http://119.28.179.110/recycle/user/addBalance.action',
+      url: 'http://119.28.179.110/recycle/guser/addBalance.action',
       method: 'POST',
       data: {
         token: to1,
-        balance: e.detail.value.name,
+        gbalance: e.detail.value.name
       },
       success: function (res) {
         wx.showToast({
@@ -27,9 +27,12 @@ Page({
           duration: 1500
         })
         console.log(e.detail.value.name)
-        wx.reLaunch({
-          url: '../remine'
-        })
+        setTimeout(function e() {
+          wx.reLaunch({
+            url: '../remine'
+          })
+        },2000)
+        
       },
     })
   },

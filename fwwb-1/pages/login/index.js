@@ -46,8 +46,11 @@ Page({
           "password": e.detail.value.password
         },
         success: function (res) {
+          var getAppInfo = app.globalData.token;
+          getApp().globalData.token = res.data[2].token;
+          console.log(res.data)
           wx.reLaunch({
-            url: '../home/home'
+            url: '../recycle/remine/remine'
           })
         },
         fail: function (res) {

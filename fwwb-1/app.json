@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/login/index",
-    
+    "pages/index/index",
     
     "pages/home/search/search",
     "pages/home/home",
@@ -22,7 +21,14 @@
     "pages/admine/recycle/recycle",
     "pages/admine/user/user",
     "pages/admine/list/list",
-    "pages/mine/addM/addM"
+    "pages/mine/addM/addM",
+    "pages/recycle/home/home",
+    "pages/recycle/home/detail/index",
+    "pages/recycle/home/search/search",
+    "pages/recycle/remine/remine",
+    "pages/recycle/remine/recharge/recharge",
+    "pages/recycle/remine/serve/serve"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,19 +43,13 @@
     "borderStyle": "#000",
     "list": [
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/recycle/home/home",
         "iconPath": "images/bottomNav/home.png",
         "selectedIconPath": "images/bottomNav/home_select.png",
         "text": "首页"
       },
       {
-        "pagePath": "pages/cart/cart",
-        "iconPath": "images/bottomNav/cart.png",
-        "selectedIconPath": "images/bottomNav/cart_select.png",
-        "text": "资源车"
-      },
-      {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/recycle/remine/remine",
         "iconPath": "images/bottomNav/mine.png",
         "selectedIconPath": "images/bottomNav/mine_select.png",
         "text": "个人中心"

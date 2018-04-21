@@ -21,22 +21,15 @@ Page({
         balance: e.detail.value.name,
       },
       success: function (res) {
-        if (res.data.status == 200) {
           wx.showToast({
             title: '保存成功',
             duration: 1500
           })
-        } else {
-          wx.showToast({
-            title: '保存失败',
-            duration: 1000
+          console.log(e.detail.value.name)
+          wx.reLaunch({
+            url: '../mine'
           })
-        }
-        console.log(e.detail.value.name)
-        wx.reLaunch({
-          url: '../mine'
-        })
-      }
+        },
     })
   },
   /**
